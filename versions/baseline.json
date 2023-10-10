@@ -2,7 +2,7 @@
   "default": {
     "cmake-cpm": {
       "baseline": "0.38.6",
-      "port-version": 0
+      "port-version": 1
     },
     "vcpkg-cmake-module": {
       "baseline": "2023-10-11",
