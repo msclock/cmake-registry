@@ -1,0 +1,4 @@
+The package cmake-cpm provides CMake modules:
+
+    find_package(cmake-cpm REQUIRED)
+    include(CPM)
