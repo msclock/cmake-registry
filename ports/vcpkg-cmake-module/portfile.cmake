@@ -1,5 +1,5 @@
 if(NOT TARGET_TRIPLET STREQUAL _HOST_TRIPLET)
-    message(WARNING "vcpkg-cmake-module is a host-only port; please mark it as a host port in your dependencies.")
+    message(WARNING "${PORT} is a host-only port; please mark it as a host port in your dependencies.")
 endif()
 
 file(INSTALL

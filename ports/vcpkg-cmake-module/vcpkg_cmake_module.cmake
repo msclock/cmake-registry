@@ -47,6 +47,11 @@ function(vcpkg_cmake_module)
   endif()
 
   if(arg_DIRECTORY_LIST)
+    # Delete tail "/"
+    if(arg_DIRECTORY_LIST MATCHES [[(/$)]])
+      string(REGEX REPLACE [[(/$)]] "" arg_DIRECTORY_LIST ${arg_DIRECTORY_LIST})
+    endif()
+
     foreach(_dir "${arg_DIRECTORY_LIST}")
       if(NOT IS_DIRECTORY ${_dir})
         message(
@@ -68,15 +73,15 @@ function(vcpkg_cmake_module)
         LIST_DIRECTORIES ON
         RELATIVE "${_dir}"
         "${_dir}/*")
+
       list(FILTER _dir_itmes EXCLUDE REGEX [[^\.]])
-      message(STATUS ${_dir_itmes})
+
       foreach(_item ${_dir_itmes})
         if(IS_DIRECTORY "${_dir}/${_item}")
           string(
             APPEND
             _export_in_vcpkg_cmake_wrapper
-            "${_export_in_vcpkg_cmake_wrapper}list(APPEND CMAKE_PREFIX_PATH "
-            "\${CMAKE_CURRENT_LIST_DIR}/${_modules_dir_path}/${_dir_name}/${_item})\n"
+            "list(APPEND CMAKE_PREFIX_PATH \${CMAKE_CURRENT_LIST_DIR}/${_modules_path}/${_dir_name}/${_item})\n"
           )
         endif()
       endforeach()
