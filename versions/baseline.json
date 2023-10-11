@@ -4,6 +4,10 @@
       "baseline": "0.38.6",
       "port-version": 1
     },
+    "cmake-modules": {
+      "baseline": "1.0.0",
+      "port-version": 0
+    },
     "vcpkg-cmake-module": {
       "baseline": "2023-10-11",
       "port-version": 2

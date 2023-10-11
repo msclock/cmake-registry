@@ -1,0 +1,6 @@
+The package cmake-modules provides modules:
+
+    find_package(cmake-modules REQUIRED)
+    include(cmake-modules/build/Default)
+
+More modules can refer to <https://github.com/msclock/cmake-modules>.

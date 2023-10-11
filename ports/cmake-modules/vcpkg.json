@@ -1,0 +1,14 @@
+{
+  "name": "cmake-modules",
+  "version": "1.0.0",
+  "port-version": 0,
+  "homepage": "https://github.com/msclock/cmake-modules",
+  "description": "Some useful cmake module collection",
+  "license": "Apache-2.0",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake-module",
+      "host": true
+    }
+  ]
+}
