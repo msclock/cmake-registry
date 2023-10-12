@@ -12,7 +12,7 @@ vcpkg_from_github(
 vcpkg_replace_string(${SOURCE_PATH}/cmake/CPM.cmake
                      [[1.0.0-development-version]] ${VERSION})
 
-vcpkg_cmake_module(FILE_LIST ${SOURCE_PATH}/cmake/CPM.cmake)
+vcpkg_cmake_module(PATH_LIST ${SOURCE_PATH}/cmake/CPM.cmake)
 
 file(INSTALL ${CMAKE_CURRENT_LIST_DIR}/usage
      DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT})
