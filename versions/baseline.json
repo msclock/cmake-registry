@@ -10,7 +10,7 @@
     },
     "vcpkg-cmake-module": {
       "baseline": "2023-10-12",
-      "port-version": 0
+      "port-version": 1
     }
   }
 }

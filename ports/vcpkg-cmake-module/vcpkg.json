@@ -1,6 +1,6 @@
 {
   "name": "vcpkg-cmake-module",
   "version-date": "2023-10-12",
-  "port-version": 0,
+  "port-version": 1,
   "license": "MIT"
 }

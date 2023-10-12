@@ -1,10 +1,22 @@
 include_guard(GLOBAL)
+#[[
+This function install cmake module paths under the target path
+share/${PORT}/_modules/${PORT}.
 
+Example:
+  # some modules under the path `dummy/path`
+  file(GLOB _paths "dummy/path/*")
+  vcpkg_cmake_module(PATH_LIST ${_paths})
+
+Note:
+  Once the function was used, not only path modules would be moved to the
+  target path, but also a variable ${PORT}_MODULE_PATH would target to it.
+]]
 function(vcpkg_cmake_module)
   # Set options
   set(_opt)
   set(_single_opt PACKAGE_NAME MODULE_PATH)
-  set(_multi_opt FILE_LIST DIRECTORY_LIST)
+  set(_multi_opt PATH_LIST)
   cmake_parse_arguments(PARSE_ARGV 0 "arg" "${_opt}" "${_single_opt}"
                         "${_multi_opt}")
 
@@ -15,9 +27,8 @@ function(vcpkg_cmake_module)
     )
   endif()
 
-  if(NOT arg_FILE_LIST AND NOT arg_DIRECTORY_LIST)
-    message(
-      FATAL_ERROR "Both arg_FILE_LIST and arg_DIRECTORY_LIST cannot be empty")
+  if(NOT arg_PATH_LIST)
+    message(FATAL_ERROR "PATH_LIST cannot be empty")
   endif()
 
   if(NOT arg_PACKAGE_NAME)
@@ -28,76 +39,39 @@ function(vcpkg_cmake_module)
     set(arg_MODULE_PATH "${arg_PACKAGE_NAME}")
   endif()
 
-  set(_modules_dir_path "_modules")
-  set(_modules_path "${_modules_dir_path}/${arg_MODULE_PATH}")
+  set(_in_shared_dir_name "_modules")
+  set(_modules_root "${_in_shared_dir_name}/${arg_MODULE_PATH}")
   set(_export_in_vcpkg_cmake_wrapper
-      "include_guard(GLOBAL)\n\nlist(APPEND CMAKE_MODULE_PATH \${CMAKE_CURRENT_LIST_DIR}/${_modules_dir_path})\n"
+      "include_guard(GLOBAL)\n\nlist(APPEND CMAKE_MODULE_PATH \${CMAKE_CURRENT_LIST_DIR}/${_in_shared_dir_name})\n"
   )
   string(
-    APPEND
-    _export_in_vcpkg_cmake_wrapper
-    "list(APPEND CMAKE_PREFIX_PATH \${CMAKE_CURRENT_LIST_DIR}/${_modules_path})\n"
-  )
+    APPEND _export_in_vcpkg_cmake_wrapper
+    "set(${PORT}_MODULE_PATH \${CMAKE_CURRENT_LIST_DIR}/${_modules_root})\n")
 
-  if(arg_FILE_LIST)
-    foreach(_file ${arg_FILE_LIST})
-      file(INSTALL "${_file}"
-           DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT}/${_modules_path})
-    endforeach()
-  endif()
-
-  if(arg_DIRECTORY_LIST)
-    # Delete tail "/"
-    if(arg_DIRECTORY_LIST MATCHES [[(/$)]])
-      string(REGEX REPLACE [[(/$)]] "" arg_DIRECTORY_LIST ${arg_DIRECTORY_LIST})
-    endif()
-
-    foreach(_dir "${arg_DIRECTORY_LIST}")
-      if(NOT IS_DIRECTORY ${_dir})
-        message(
-          FATAL_ERROR
-            "DIRECTORY_LIST must pass with directories, error: ${arg_DIRECTORY_LIST}"
-        )
+  foreach(_path ${arg_PATH_LIST})
+    if(IS_DIRECTORY ${_path})
+      # Delete tail "/"
+      if(_path MATCHES [[(/$)]])
+        string(REGEX REPLACE [[(/$)]] "" _path ${_path})
       endif()
 
-      get_filename_component(_dir_name ${_dir} NAME_WE)
-
-      string(
-        APPEND
-        _export_in_vcpkg_cmake_wrapper
-        "list(APPEND CMAKE_PREFIX_PATH \${CMAKE_CURRENT_LIST_DIR}/${_modules_path}/${_dir_name})\n"
-      )
-
-      file(
-        GLOB_RECURSE _dir_itmes
-        LIST_DIRECTORIES ON
-        RELATIVE "${_dir}"
-        "${_dir}/*")
-
-      list(FILTER _dir_itmes EXCLUDE REGEX [[^\.]])
-
-      foreach(_item ${_dir_itmes})
-        if(IS_DIRECTORY "${_dir}/${_item}")
-          string(
-            APPEND
-            _export_in_vcpkg_cmake_wrapper
-            "list(APPEND CMAKE_PREFIX_PATH \${CMAKE_CURRENT_LIST_DIR}/${_modules_path}/${_dir_name}/${_item})\n"
-          )
-        endif()
-      endforeach()
-
       # Install as subdir
-      file(INSTALL ${_dir}
-           DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}/${_modules_path}")
+      file(INSTALL ${_path}
+           DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}/${_modules_root}")
+    else()
+      file(INSTALL "${_path}"
+           DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT}/${_modules_root})
+    endif()
+  endforeach()
 
-    endforeach()
-  endif()
-
-  file(WRITE ${CURRENT_PACKAGES_DIR}/share/${PORT}/vcpkg-cmake-wrapper.cmake
+  file(WRITE ${CURRENT_BUILDTREES_DIR}/vcpkg-cmake-wrapper.cmake
        ${_export_in_vcpkg_cmake_wrapper})
 
-  unset(_modules_dir_path)
-  unset(_modules_path)
+  file(INSTALL ${CURRENT_BUILDTREES_DIR}/vcpkg-cmake-wrapper.cmake
+       DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT})
+
+  unset(_in_shared_dir_name)
+  unset(_modules_root)
   unset(_export_in_vcpkg_cmake_wrapper)
 
 endfunction()
