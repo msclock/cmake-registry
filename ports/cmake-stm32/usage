@@ -1,0 +1,5 @@
+The package cmake-stm32 provides modules:
+
+    find_package(cmake-stm32 REQUIRED)
+    # More modules can refer to <https://github.com/ObKo/stm32-cmake>.
+    include(cmake-stm32/stm32_gcc.cmake)
