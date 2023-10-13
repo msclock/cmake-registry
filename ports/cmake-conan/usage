@@ -1,0 +1,5 @@
+The package cmake-conan provides CMake modules:
+
+    find_package(cmake-conan REQUIRED)
+    # More detail can refer to <https://github.com/conan-io/cmake-conan>.
+    include(cmake-conan/conan)
