@@ -16,6 +16,10 @@
       "baseline": "2023-10-13",
       "port-version": 0
     },
+    "rpavlik-cmake-modules": {
+      "baseline": "2023-10-13",
+      "port-version": 0
+    },
     "vcpkg-cmake-module": {
       "baseline": "2023-10-12",
       "port-version": 1

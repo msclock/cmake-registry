@@ -1,0 +1,5 @@
+The package rpavlik-cmake-modules provides modules:
+
+    find_package(rpavlik-cmake-modules REQUIRED)
+    # More modules can refer to <https://github.com/rpavlik/cmake-modules>.
+    include(rpavlik-cmake-modules/UseBackportedModules)

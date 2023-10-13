@@ -1,0 +1,13 @@
+{
+  "name": "rpavlik-cmake-modules",
+  "version": "2023-10-13",
+  "description": "Ryan's CMake Modules Collection.",
+  "homepage": "https://github.com/rpavlik/cmake-modules",
+  "license": "BSL-1.0",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake-module",
+      "host": true
+    }
+  ]
+}
