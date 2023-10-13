@@ -1,0 +1,5 @@
+The package stablecoder-cmake-scripts provides modules:
+
+    find_package(stablecoder-cmake-scripts REQUIRED)
+    # More modules can refer to <https://github.com/StableCoder/cmake-scripts>.
+    include(stablecoder-cmake-scripts/c++-standards)
