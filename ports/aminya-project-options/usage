@@ -1,0 +1,5 @@
+The package aminya-project-options provides modules:
+
+    find_package(aminya-project-options REQUIRED)
+    # More modules can refer to <https://github.com/aminya/project_options>.
+    include(aminya-project-options/Index.cmake)

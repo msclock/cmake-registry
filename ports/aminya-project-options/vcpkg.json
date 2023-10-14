@@ -1,0 +1,13 @@
+{
+  "name": "aminya-project-options",
+  "version": "0.32.1",
+  "description": "A general-purpose CMake library that provides functions that improve the CMake experience following the best practices.",
+  "homepage": "https://github.com/aminya/project_options",
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake-module",
+      "host": true
+    }
+  ]
+}
