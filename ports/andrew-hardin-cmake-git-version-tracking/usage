@@ -1,0 +1,7 @@
+The package andrew-hardin-cmake-git-version-tracking provides modules:
+
+    find_package(andrew-hardin-cmake-git-version-tracking REQUIRED)
+    # More details can refer to <https://github.com/andrew-hardin/cmake-git-version-tracking>.
+    # Defaults to the directory with the top level CMakeLists.txt.
+    set(GIT_WORKING_DIR git/working/path)
+    add_subdirectory(${andrew-hardin-cmake-git-version-tracking_MODULE_PATH})
