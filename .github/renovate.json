@@ -1,0 +1,35 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":enablePreCommit"
+  ],
+  "prHourlyLimit": 0,
+  "labels": [
+    "dependencies"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update vcpkg.json registration port with git hash",
+      "fileMatch": [
+        "(\/)\\.vcpkg\\.json$"
+      ],
+      "matchStrings": [
+        "\\s+\"version-string\":\\s+\"(?<currentDigest>.*?)\"[\\w\\W]+\"homepage\":\\s\"(?<depName>.*?)\\/tree\\/(?<currentValue>.*?)\""
+      ],
+      "datasourceTemplate": "git-refs"
+    },
+    {
+      "customType": "regex",
+      "description": "Update vcpkg.json registration port with semver",
+      "fileMatch": [
+        "(\/)\\.vcpkg\\.json$"
+      ],
+      "matchStrings": [
+        "\\s+\"version\":\\s+\"(?<currentValue>.*?)\"[\\w\\W]+\"homepage\":\\s\"https:\\/\\/github.com\\/(?<depName>.*?)\""
+      ],
+      "datasourceTemplate": "git-tags"
+    }
+  ]
+}
