@@ -4,7 +4,7 @@ vcpkg_from_github(
   REPO
   ObKo/stm32-cmake
   REF
-  9b5d77ca0d8731ab2891aa17ef18a143ef90eef2
+  ${VERSION}
   SHA512
   18c63c8762d19255bbda099b4f7c4acbe1b0e7e67b9e04f3670bf3335be139dc3729633337af78bded0b2f01983bee6d9b9fe81468f1011153ab2e0e8fea3d5a
   HEAD_REF

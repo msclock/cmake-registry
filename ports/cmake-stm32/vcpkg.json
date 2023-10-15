@@ -1,8 +1,8 @@
 {
   "name": "cmake-stm32",
-  "version": "2023-10-13",
+  "version-string": "9b5d77ca0d8731ab2891aa17ef18a143ef90eef2",
   "description": "CMake for stm32 developing.",
-  "homepage": "https://github.com/ObKo/stm32-cmake",
+  "homepage": "https://github.com/ObKo/stm32-cmake/tree/master",
   "license": "MIT",
   "dependencies": [
     {

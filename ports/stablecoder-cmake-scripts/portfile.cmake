@@ -4,7 +4,7 @@ vcpkg_from_github(
   REPO
   StableCoder/cmake-scripts
   REF
-  8a92770d1e518a86788b67ab0e4e5f965a399cc8
+  ${VERSION}
   SHA512
   bb27c23adde569f3d2bcf5620b149381281496782072ff544c37b6bca6265a9936f1e82b41483a77d2efa3a2178cd3b9b5a12bb40e71257598e27388db4d91d6
   HEAD_REF

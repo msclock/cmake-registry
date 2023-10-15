@@ -17,15 +17,15 @@
       "port-version": 0
     },
     "cmake-stm32": {
-      "baseline": "2023-10-13",
+      "baseline": "9b5d77ca0d8731ab2891aa17ef18a143ef90eef2",
       "port-version": 0
     },
     "rpavlik-cmake-modules": {
-      "baseline": "2023-10-13",
+      "baseline": "d66fc5dec3eaea3a4f9778ceeeb65cbec490b5b9",
       "port-version": 0
     },
     "stablecoder-cmake-scripts": {
-      "baseline": "2023-10-13",
+      "baseline": "8a92770d1e518a86788b67ab0e4e5f965a399cc8",
       "port-version": 0
     },
     "vcpkg-cmake-module": {

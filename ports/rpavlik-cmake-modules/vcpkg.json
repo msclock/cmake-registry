@@ -1,8 +1,8 @@
 {
   "name": "rpavlik-cmake-modules",
-  "version": "2023-10-13",
+  "version-string": "d66fc5dec3eaea3a4f9778ceeeb65cbec490b5b9",
   "description": "Ryan's CMake Modules Collection.",
-  "homepage": "https://github.com/rpavlik/cmake-modules",
+  "homepage": "https://github.com/rpavlik/cmake-modules/tree/main",
   "license": "BSL-1.0",
   "dependencies": [
     {
