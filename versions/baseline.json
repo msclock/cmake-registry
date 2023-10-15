@@ -17,7 +17,7 @@
       "port-version": 0
     },
     "cmake-stm32": {
-      "baseline": "9b5d77ca0d8731ab2891aa17ef18a143ef90eef2",
+      "baseline": "845373b1562ca7ff34ef8c5762d5976749ac1478",
       "port-version": 0
     },
     "rpavlik-cmake-modules": {
