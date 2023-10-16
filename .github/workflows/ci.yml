@@ -79,7 +79,7 @@ jobs:
               vcpkg install ${dir##ports/} --overlay-ports=ports
           done
 
-      - name: Detect ports changes
+      - name: Detect ports changes against default branch
         id: filter-ports
         uses: dorny/paths-filter@v2
         with:
@@ -97,7 +97,7 @@ jobs:
               --x-builtin-ports-root=./ports
           done
 
-      - name: Detect versions changes
+      - name: Detect versions changes against local
         if: steps.filter-ports.outputs.ports == 'true'
         id: filter-versions
         uses: dorny/paths-filter@v2
@@ -128,7 +128,7 @@ jobs:
     name: release
     runs-on: ubuntu-latest
     permissions:
-      contents: write # write for semantic-release
+      contents: write
     needs: [pre-commit]
 
     steps:
