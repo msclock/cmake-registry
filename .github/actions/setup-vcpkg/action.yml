@@ -1,0 +1,33 @@
+name: Setup Vcpkg
+description: Install a full vcpkg environment
+inputs:
+
+  vcpkgVersion:
+    description: Enter vcpkg version tag or stable or latest
+    required: false
+    default: latest
+    type: string
+
+  vcpkgRoot:
+    description: Enter VCPKGROOT as vcpkg root path
+    required: false
+    default: /usr/local/vcpkg
+    type: string
+
+  vcpkgDownload:
+    description: Enter VCPKGDOWNLOAD as vcpkg download path
+    required: false
+    default: /usr/local/vcpkg-downloads
+    type: string
+
+runs:
+  using: composite
+  steps:
+    - name: Setup vcpkg
+      run: |
+        git clone --depth 1 https://github.com/msclock/features.git /tmp/vcpkg
+
+        sudo USERNAME="$USER" VCPKGVERSION="${{ inputs.vcpkgVersion }}" VCPKGROOT="${{ inputs.vcpkgRoot }}" \
+          VCPKGDOWNLOAD="${{ inputs.vcpkgDownload }}" /tmp/vcpkg/src/vcpkg/install.sh
+        vcpkg --version
+      shell: bash

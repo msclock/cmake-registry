@@ -35,3 +35,91 @@ jobs:
         if: failure()
         with:
           commit_message: 'ci: auto fixes from pre-commit'
+
+  format_and_update_ports:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: ${{ github.head_ref }}
+          fetch-depth: 2
+
+      - name: Setup vcpkg
+        uses: ./.github/actions/setup-vcpkg
+        with:
+          vcpkgVersion: latest
+          vcpkgRoot: /usr/local/vcpkg
+          vcpkgDownload: /usr/local/vcpkg-downloads
+
+      - name: Format vcpkg.json
+        run: |
+          vcpkg format-manifest --all $(find . -name "vcpkg.json")
+
+      - name: Commit format vcpkg.json
+        uses: stefanzweifel/git-auto-commit-action@v5
+        if: success()
+        with:
+          commit_message: 'ci: format vcpkg configuration'
+          file_pattern: vcpkg.json
+
+      - name: Exit 1 if vcpkg configuration changes have been detected
+        if: steps.auto-commit-action.outputs.changes_detected == 'true'
+        run: |
+          exit 1
+
+      - name: Install all modules
+        run: |
+          for dir in ports/* ; do
+              echo "Test to install $dir"
+              vcpkg install ${dir##ports/} --overlay-ports=ports
+          done
+
+      - name: Detect ports changes
+        id: filter-ports
+        uses: dorny/paths-filter@v2
+        with:
+          list-files: shell
+          filters: |
+            ports:
+              - ports/**
+
+      - name: Update versions
+        if: steps.filter-ports.outputs.ports == 'true'
+        run: |
+          for dir in ports/* ; do
+            vcpkg x-add-version ${dir##ports/} --overlay-ports=./ports \
+              --x-builtin-registry-versions-dir=./versions/ \
+              --x-builtin-ports-root=./ports
+          done
+
+      - name: Detect versions changes
+        if: steps.filter-ports.outputs.ports == 'true'
+        id: filter-versions
+        uses: dorny/paths-filter@v2
+        with:
+          list-files: shell
+          base: HEAD
+          filters: |
+            versions:
+              - versions/**
+
+      - name: Get last commit message
+        if: steps.filter-ports.outputs.versions == 'true'
+        id: last-commit-message
+        run: |
+          echo "msg=$(git log -1 --pretty=%s)" >> $GITHUB_OUTPUT
+
+      - name: Commit versions
+        if: steps.filter-versions.outputs.versions == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          file_pattern: versions/*
+          commit_message: ${{ steps.last-commit-message.outputs.msg }}
+          push_options: --force
+          commit_options: --amend --no-edit
+          skip_fetch: true
