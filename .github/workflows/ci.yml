@@ -129,7 +129,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    needs: [pre-commit]
+    needs: [pre-commit, format_and_update_ports]
 
     steps:
       - name: Checkout
