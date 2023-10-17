@@ -29,7 +29,7 @@
       "matchStrings": [
         "\\s+\"version\":\\s+\"(?<currentValue>.*?)\"[\\w\\W]+\"homepage\":\\s\"https:\\/\\/github.com\\/(?<depName>.*?)\""
       ],
-      "datasourceTemplate": "git-tags"
+      "datasourceTemplate": "github-tags"
     }
   ]
 }
