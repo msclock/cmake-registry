@@ -109,7 +109,7 @@ jobs:
               - versions/**
 
       - name: Get last commit message
-        if: steps.filter-ports.outputs.versions == 'true'
+        if: steps.filter-versions.outputs.versions == 'true'
         id: last-commit-message
         run: |
           echo "msg=$(git log -1 --pretty=%s)" >> $GITHUB_OUTPUT
