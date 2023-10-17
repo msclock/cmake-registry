@@ -1,3 +1,17 @@
+## [1.0.1](https://github.com/msclock/cmake-registry/compare/v1.0.0...v1.0.1) (2023-10-17)
+
+
+### Chores
+
+* **port:** update cmake-modules 1.0.4 ([542e94b](https://github.com/msclock/cmake-registry/commit/542e94bd2102453050ed198300da81e7b5b5597d))
+* usage github tags on renovate ([d4f71e6](https://github.com/msclock/cmake-registry/commit/d4f71e618bbd4edd2ca171a81f4b007c028a0cc0))
+
+
+### CI
+
+* improve readability ([1a27005](https://github.com/msclock/cmake-registry/commit/1a270054b84891ddce1163baed81b3b65f61f93d))
+* release needs add format_and_update_ports ([5239ce8](https://github.com/msclock/cmake-registry/commit/5239ce8434529af9f6764b4d1950c981315ac044))
+
 ## 1.0.0 (2023-10-16)
 
 
