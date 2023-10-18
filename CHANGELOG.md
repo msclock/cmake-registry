@@ -1,3 +1,17 @@
+## [1.0.2](https://github.com/msclock/cmake-registry/compare/v1.0.1...v1.0.2) (2023-10-18)
+
+
+### Chores
+
+* **port:** new port cmake-forward-arguments ([88c4c25](https://github.com/msclock/cmake-registry/commit/88c4c2506b7e18dfcee89ca2d19d443d4ed189b1))
+* **port:** new port robotology-cmake-ycm ([2dad44b](https://github.com/msclock/cmake-registry/commit/2dad44b8f4a2c2d94b836d6b5e9977494aec4839))
+* **port:** update cmake-modules to 1.1.0 ([7771c20](https://github.com/msclock/cmake-registry/commit/7771c20b75ab5c7ab3aec2a16e3b2f61e6fab56d))
+
+
+### CI
+
+* restrict push on master ([3e7f515](https://github.com/msclock/cmake-registry/commit/3e7f515932b6fdad3095cda824d21760717c35a3))
+
 ## [1.0.1](https://github.com/msclock/cmake-registry/compare/v1.0.0...v1.0.1) (2023-10-17)
 
 
