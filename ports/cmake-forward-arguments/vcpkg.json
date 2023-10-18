@@ -1,0 +1,13 @@
+{
+  "name": "cmake-forward-arguments",
+  "version": "1.0.0",
+  "description": "Cherry pick parts of variable-length argument lists to forward on to callees in CMake",
+  "homepage": "https://github.com/polysquare/cmake-forward-arguments",
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake-module",
+      "host": true
+    }
+  ]
+}
