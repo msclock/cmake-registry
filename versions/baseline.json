@@ -16,6 +16,10 @@
       "baseline": "0.38.6",
       "port-version": 2
     },
+    "cmake-forward-arguments": {
+      "baseline": "1.0.0",
+      "port-version": 0
+    },
     "cmake-modules": {
       "baseline": "1.1.0",
       "port-version": 0

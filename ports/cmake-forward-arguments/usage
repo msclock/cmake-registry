@@ -1,0 +1,4 @@
+The package cmake-forward-arguments provides CMake modules:
+
+    find_package(cmake-forward-arguments REQUIRED)
+    include(cmake-forward-arguments/ForwardArguments)
