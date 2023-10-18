@@ -1,0 +1,4 @@
+The package robotology-cmake-ycm provides CMake modules:
+
+    find_package(robotology-cmake-ycm REQUIRED)
+    include(robotology-cmake-ycm/modules/GitInfo)
