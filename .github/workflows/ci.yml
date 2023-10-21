@@ -75,12 +75,47 @@ jobs:
         run: |
           exit 1
 
-      - name: Install all modules
+      - name: Verify all modules and update hash
         run: |
           for dir in ports/* ; do
               echo "Test to install $dir"
-              vcpkg install ${dir##ports/} --overlay-ports=ports
+              status=0
+              install_output=$(vcpkg install ${dir##ports/} --overlay-ports=ports) || status=$?
+              if [[ ! $status -eq 0 ]]; then
+                echo "  Update hash on $dir/portfile.cmake"
+                expected=$(echo "$install_output" | grep -oP "(?<=Expected hash: ).{128}")
+                actual=$(echo "$install_output" | grep -oP "(?<=Actual hash: ).{128}")
+                sed -i "s@${expected}@${actual}@g" "$dir/portfile.cmake"
+                echo "  Expected hash: ${expected}"
+                echo "  Actual hash: ${actual}"
+              fi
           done
+
+      - name: Detect hash changes against local
+        id: filter-hash
+        uses: dorny/paths-filter@v2
+        with:
+          list-files: shell
+          base: HEAD
+          filters: |
+            ports:
+              - ports/**
+
+      - name: Get ports last commit message
+        if: steps.filter-hash.outputs.ports == 'true'
+        id: ports-last-commit-message
+        run: |
+          echo "msg=$(git log -1 --pretty=%s)" >> $GITHUB_OUTPUT
+
+      - name: Commit port hash
+        if: steps.filter-hash.outputs.ports == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          file_pattern: ports/*
+          commit_message: ${{ steps.ports-last-commit-message.outputs.msg }}
+          push_options: --force
+          commit_options: --amend --no-edit
+          skip_fetch: true
 
       - name: Detect ports changes against default branch
         id: filter-ports
