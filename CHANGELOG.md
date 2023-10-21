@@ -1,3 +1,11 @@
+## [1.0.5](https://github.com/msclock/cmake-registry/compare/v1.0.4...v1.0.5) (2023-10-21)
+
+
+### Chores
+
+* fix renovate config ([da06f29](https://github.com/msclock/cmake-registry/commit/da06f294dd25f644a3372d380cb23f4b70e84136))
+* **port:** update dependency aminya/project_options to v0.32.2 ([19b4d1b](https://github.com/msclock/cmake-registry/commit/19b4d1bef1eb7ed0a5b2f43e4a0aca7766b062cd))
+
 ## [1.0.4](https://github.com/msclock/cmake-registry/compare/v1.0.3...v1.0.4) (2023-10-21)
 
 
