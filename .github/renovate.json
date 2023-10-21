@@ -13,7 +13,8 @@
       "matchFileNames": [
         "**/vcpkg.json"
       ],
-      "semanticCommitScope": "port"
+      "semanticCommitScope": "port",
+      "commitMessageTopic": "{{depName}}"
     }
   ],
   "customManagers": [
