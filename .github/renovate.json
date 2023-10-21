@@ -8,12 +8,19 @@
   "labels": [
     "dependencies"
   ],
+  "packageRules": [
+    {
+      "matchFileNames": [
+        "**/vcpkg.json"
+      ],
+      "semanticCommitScope": "port"
+    }
+  ],
   "customManagers": [
     {
-      "customType": "regex",
       "description": "Update vcpkg.json registration port with git hash",
       "fileMatch": [
-        "(\/)\\.vcpkg\\.json$"
+        "vcpkg\\.json$"
       ],
       "matchStrings": [
         "\\s+\"version-string\":\\s+\"(?<currentDigest>.*?)\"[\\w\\W]+\"homepage\":\\s\"(?<depName>.*?)\\/tree\\/(?<currentValue>.*?)\""
@@ -21,14 +28,14 @@
       "datasourceTemplate": "git-refs"
     },
     {
-      "customType": "regex",
       "description": "Update vcpkg.json registration port with semver",
       "fileMatch": [
-        "(\/)\\.vcpkg\\.json$"
+        "vcpkg\\.json$"
       ],
       "matchStrings": [
         "\\s+\"version\":\\s+\"(?<currentValue>.*?)\"[\\w\\W]+\"homepage\":\\s\"https:\\/\\/github.com\\/(?<depName>.*?)\""
       ],
+      "extractVersionTemplate": "^v?(?<version>\\d+\\.\\d+.*)",
       "datasourceTemplate": "github-tags"
     }
   ]
