@@ -1,3 +1,12 @@
+## [1.0.6](https://github.com/msclock/cmake-registry/compare/v1.0.5...v1.0.6) (2023-10-22)
+
+
+### Chores
+
+* add label update-port for renovate ([4eafdf3](https://github.com/msclock/cmake-registry/commit/4eafdf3393e625532b19dbfee62b6e41a623679f))
+* configure renovate port message ([7bc5795](https://github.com/msclock/cmake-registry/commit/7bc57953caf8daf7c3f92aaea655469fe2c92f1f))
+* **port:** update msclock/cmake-modules to v1.1.4 ([7458ac7](https://github.com/msclock/cmake-registry/commit/7458ac7d088d9d304a5a23e4a820c93b61ab016e))
+
 ## [1.0.5](https://github.com/msclock/cmake-registry/compare/v1.0.4...v1.0.5) (2023-10-21)
 
 
