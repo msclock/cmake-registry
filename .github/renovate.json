@@ -10,6 +10,9 @@
   ],
   "packageRules": [
     {
+      "addLabels": [
+        "update-port"
+      ],
       "matchFileNames": [
         "**/vcpkg.json"
       ],
