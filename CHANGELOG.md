@@ -1,3 +1,11 @@
+## [1.0.8](https://github.com/msclock/cmake-registry/compare/v1.0.7...v1.0.8) (2023-10-24)
+
+
+### Chores
+
+* **deps:** update actions/setup-node action to v4 ([0b6c088](https://github.com/msclock/cmake-registry/commit/0b6c088b5a469f6b019175edb5451fcfa6182ad2))
+* **port:** update msclock/cmake-modules to v1.1.6 ([c864b71](https://github.com/msclock/cmake-registry/commit/c864b710fc48d2e1f1f09403ac87e5311b258316))
+
 ## [1.0.7](https://github.com/msclock/cmake-registry/compare/v1.0.6...v1.0.7) (2023-10-22)
 
 
