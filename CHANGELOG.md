@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/msclock/cmake-registry/compare/v1.0.9...v1.0.10) (2023-10-25)
+
+
+### Chores
+
+* **port:** update msclock/cmake-modules to v1.2.1 ([ddbead0](https://github.com/msclock/cmake-registry/commit/ddbead0b39e68dc8931e9c61042dfb25c8c07aac))
+
 ## [1.0.9](https://github.com/msclock/cmake-registry/compare/v1.0.8...v1.0.9) (2023-10-25)
 
 
