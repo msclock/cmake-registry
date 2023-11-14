@@ -25,7 +25,7 @@
       "port-version": 0
     },
     "cmake-stm32": {
-      "baseline": "9b5d77ca0d8731ab2891aa17ef18a143ef90eef2",
+      "baseline": "274dc90e1350459386d6ce24ed93bb954b90fafd",
       "port-version": 0
     },
     "robotology-cmake-ycm": {
