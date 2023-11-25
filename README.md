@@ -1,6 +1,6 @@
 # A cmake registry
 
-This is a cmake modules registry based on vcpkg and accepts cmake module registration.
+This is a cmake modules registry based on vcpkg and accepts cmake module registration. Once a cmake module repository is registered, it will automatically detect and make a pr to update by renovate.
 
 ## Usage
 
