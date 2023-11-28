@@ -1,3 +1,10 @@
+## [1.0.19](https://github.com/msclock/cmake-registry/compare/v1.0.18...v1.0.19) (2023-11-28)
+
+
+### Chores
+
+* **port:** update robotology/ycm to v0.16.1 ([e545ea8](https://github.com/msclock/cmake-registry/commit/e545ea8bd700c3d21552b0c6becf34156bba9a9f))
+
 ## [1.0.18](https://github.com/msclock/cmake-registry/compare/v1.0.17...v1.0.18) (2023-11-27)
 
 
