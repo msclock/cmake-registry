@@ -1,3 +1,10 @@
+## [1.0.20](https://github.com/msclock/cmake-registry/compare/v1.0.19...v1.0.20) (2023-12-01)
+
+
+### Chores
+
+* **port:** update cpm-cmake/cpm.cmake to v0.38.7 ([884fc15](https://github.com/msclock/cmake-registry/commit/884fc151d16322f4990a74c0fe2c2c9ac1815c64))
+
 ## [1.0.19](https://github.com/msclock/cmake-registry/compare/v1.0.18...v1.0.19) (2023-11-28)
 
 
