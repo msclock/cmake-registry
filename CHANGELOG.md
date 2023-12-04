@@ -1,3 +1,10 @@
+## [1.0.21](https://github.com/msclock/cmake-registry/compare/v1.0.20...v1.0.21) (2023-12-04)
+
+
+### Chores
+
+* **port:** update https://github.com/rpavlik/cmake-modules to 03239c6 ([051bae6](https://github.com/msclock/cmake-registry/commit/051bae62d41a331c445bfb8fdbfdac6ba5525207))
+
 ## [1.0.20](https://github.com/msclock/cmake-registry/compare/v1.0.19...v1.0.20) (2023-12-01)
 
 
