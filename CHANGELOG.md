@@ -1,3 +1,10 @@
+## [1.0.22](https://github.com/msclock/cmake-registry/compare/v1.0.21...v1.0.22) (2023-12-06)
+
+
+### Chores
+
+* **port:** new port vector-of-bool/cmrc ([fb21b46](https://github.com/msclock/cmake-registry/commit/fb21b46c18830724d99dd737fa070c7b54a70ec1))
+
 ## [1.0.21](https://github.com/msclock/cmake-registry/compare/v1.0.20...v1.0.21) (2023-12-04)
 
 
