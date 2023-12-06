@@ -1,0 +1,8 @@
+The package vector-of-bool-cmrc provides cmake modules:
+
+    find_package(CMakeRC REQUIRED)
+    include(vector-of-bool-cmrc/CMakeRC)
+    cmrc_add_resource_library(foo-resources ALIAS foo::rc NAMESPACE foo  ...)
+    target_link_libraries(main PRIVATE foo::rc)
+
+See https://github.com/vector-of-bool/cmrc/blob/master/README.md
