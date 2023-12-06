@@ -1,0 +1,13 @@
+{
+  "name": "vector-of-bool-cmrc",
+  "version-string": "952ffddba731fc110bd50409e8d2b8a06abbd237",
+  "description": "A Resource Compiler in a Single CMake Script",
+  "homepage": "https://github.com/vector-of-bool/cmrc/tree/master",
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake-module",
+      "host": true
+    }
+  ]
+}
