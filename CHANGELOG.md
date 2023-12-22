@@ -1,3 +1,12 @@
+## [1.0.23](https://github.com/msclock/cmake-registry/compare/v1.0.22...v1.0.23) (2023-12-22)
+
+
+### Chores
+
+* **deps:** update actions/setup-python action to v5 ([fc9b16f](https://github.com/msclock/cmake-registry/commit/fc9b16f5a8e1fbf8dce0a06836ee92bba0cfcb49))
+* **deps:** update pre-commit hook macisamuele/language-formatters-pre-commit-hooks to v2.12.0 ([6c103bf](https://github.com/msclock/cmake-registry/commit/6c103bfc136655dbfd213be2f8af62be90a960b8))
+* **port:** update robotology/ycm to v0.16.2 ([0d13fa9](https://github.com/msclock/cmake-registry/commit/0d13fa99624354b24c0816df9c617736eb54910b))
+
 ## [1.0.22](https://github.com/msclock/cmake-registry/compare/v1.0.21...v1.0.22) (2023-12-06)
 
 
