@@ -1,3 +1,10 @@
+## [1.0.25](https://github.com/msclock/cmake-registry/compare/v1.0.24...v1.0.25) (2024-01-18)
+
+
+### Chores
+
+* **port:** update aminya/project_options to v0.33.1 ([#48](https://github.com/msclock/cmake-registry/issues/48)) ([34d8ab0](https://github.com/msclock/cmake-registry/commit/34d8ab0fcccc64f9c636f5708001bd71531506aa))
+
 ## [1.0.24](https://github.com/msclock/cmake-registry/compare/v1.0.23...v1.0.24) (2024-01-02)
 
 
