@@ -1,3 +1,10 @@
+## [1.0.26](https://github.com/msclock/cmake-registry/compare/v1.0.25...v1.0.26) (2024-01-30)
+
+
+### Chores
+
+* **port:** update https://github.com/obko/stm32-cmake to 6a0d255 ([#49](https://github.com/msclock/cmake-registry/issues/49)) ([122dbdb](https://github.com/msclock/cmake-registry/commit/122dbdb20301568a91ed72c705717f7efbe09909))
+
 ## [1.0.25](https://github.com/msclock/cmake-registry/compare/v1.0.24...v1.0.25) (2024-01-18)
 
 
