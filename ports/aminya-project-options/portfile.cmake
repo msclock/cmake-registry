@@ -6,7 +6,7 @@ vcpkg_from_github(
   REF
   v${VERSION}
   SHA512
-  0f00758b8a8c1ed522aed80b6decf6712cbf39b8f900f2b5445b53388944c2ed449d466b5d93bcd308f8497ca5d43287fc664d4efac486e2acfeec4f9e654ab6
+  f7bec75f80ea0135a21968b7dbb4ed150b8460d2f396f6c6b7e5ce6cae2ea1de20a6470305d85f31a7c1fc6b704134bff01daa83c2bc69bba7ca331a458b4911
 )
 
 file(GLOB items ${SOURCE_PATH}/src/*)

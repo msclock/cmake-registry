@@ -1,7 +1,7 @@
 {
   "default": {
     "aminya-project-options": {
-      "baseline": "0.33.1",
+      "baseline": "0.34.0",
       "port-version": 0
     },
     "andrew-hardin-cmake-git-version-tracking": {
