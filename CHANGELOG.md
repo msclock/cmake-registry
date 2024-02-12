@@ -1,3 +1,11 @@
+## [1.0.28](https://github.com/msclock/cmake-registry/compare/v1.0.27...v1.0.28) (2024-02-12)
+
+
+### Chores
+
+* **deps:** update pre-commit/action action to v3.0.1 ([#51](https://github.com/msclock/cmake-registry/issues/51)) ([65cbca8](https://github.com/msclock/cmake-registry/commit/65cbca850725e372fa0abaa1e5ff8ca0ac99e6b3))
+* **port:** update msclock/cmake-modules to v1.3.2 ([#52](https://github.com/msclock/cmake-registry/issues/52)) ([e81e85b](https://github.com/msclock/cmake-registry/commit/e81e85b0b303b880ef891ee36b1471393255ac6b))
+
 ## [1.0.27](https://github.com/msclock/cmake-registry/compare/v1.0.26...v1.0.27) (2024-02-02)
 
 
