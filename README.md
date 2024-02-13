@@ -11,7 +11,7 @@ Just register the cmake registry to the vcpkg configuration.
   "registries": [
     {
       "kind": "git",
-      "baseline": "8c971ad168027d4c3acbd2b3a2752b80e0859fef",
+      "baseline": "b58077c46126bee7c5cd54c26a4b974055c21d2b",
       "repository": "https://github.com/msclock/cmake-registry",
       "packages": [
         "cmake-modules",
@@ -21,12 +21,18 @@ Just register the cmake registry to the vcpkg configuration.
   ]
 }
 ```
-Add the modules to vcpkg dependencies.
+Add the modules to vcpkg configuration dependencies.
 
 ```json
 {
   "dependencies": [
     "cmake-modules"
+  ],
+  "overrides": [
+    {
+      "name": "cmake-modules",
+      "version": "1.3.0"
+    }
   ]
 }
 ```
