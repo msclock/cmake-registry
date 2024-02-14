@@ -1,3 +1,16 @@
+## [1.0.29](https://github.com/msclock/cmake-registry/compare/v1.0.28...v1.0.29) (2024-02-14)
+
+
+### Chores
+
+* **deps:** update pre-commit hook lucas-c/pre-commit-hooks to v1.5.5 ([#54](https://github.com/msclock/cmake-registry/issues/54)) ([881d585](https://github.com/msclock/cmake-registry/commit/881d585df1c4b024193479cffc6dff5dbee5e64a))
+* **port:** update msclock/cmake-modules to v1.3.3 ([#55](https://github.com/msclock/cmake-registry/issues/55)) ([b48ba84](https://github.com/msclock/cmake-registry/commit/b48ba84c2ff188feb4c1e27502c6b7ccff979d00))
+
+
+### Docs
+
+* refine usage about the registry ([#53](https://github.com/msclock/cmake-registry/issues/53)) ([bd228cd](https://github.com/msclock/cmake-registry/commit/bd228cdbaad532284374d0bfe2ad060bcd8b94d2))
+
 ## [1.0.28](https://github.com/msclock/cmake-registry/compare/v1.0.27...v1.0.28) (2024-02-12)
 
 
