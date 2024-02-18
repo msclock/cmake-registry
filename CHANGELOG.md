@@ -1,3 +1,11 @@
+## [1.0.30](https://github.com/msclock/cmake-registry/compare/v1.0.29...v1.0.30) (2024-02-18)
+
+
+### Chores
+
+* **deps:** update dorny/paths-filter action to v3 ([#56](https://github.com/msclock/cmake-registry/issues/56)) ([a95be6d](https://github.com/msclock/cmake-registry/commit/a95be6d245ef38b764f4605a6d6a3fad47b714e4))
+* **port:** update msclock/cmake-modules to v1.3.4 ([#57](https://github.com/msclock/cmake-registry/issues/57)) ([f4109f0](https://github.com/msclock/cmake-registry/commit/f4109f01d04fc17b6a71063e4ee2279932e0583b))
+
 ## [1.0.29](https://github.com/msclock/cmake-registry/compare/v1.0.28...v1.0.29) (2024-02-14)
 
 
