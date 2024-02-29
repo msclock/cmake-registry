@@ -1,3 +1,10 @@
+## [1.0.32](https://github.com/msclock/cmake-registry/compare/v1.0.31...v1.0.32) (2024-02-29)
+
+
+### Chores
+
+* **port:** update https://github.com/andrew-hardin/cmake-git-version-tracking to 6c0cb87 ([#59](https://github.com/msclock/cmake-registry/issues/59)) ([fa08f1b](https://github.com/msclock/cmake-registry/commit/fa08f1ba3b402583005a4a64056627431ba5dd5c))
+
 ## [1.0.31](https://github.com/msclock/cmake-registry/compare/v1.0.30...v1.0.31) (2024-02-20)
 
 
