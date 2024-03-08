@@ -1,6 +1,6 @@
 {
   "name": "cmake-modules",
-  "version": "1.3.9",
+  "version": "1.3.10",
   "description": "Some useful cmake module collection",
   "homepage": "https://github.com/msclock/cmake-modules",
   "license": "Apache-2.0",
