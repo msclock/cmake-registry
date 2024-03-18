@@ -1,33 +1,41 @@
 name: Setup Vcpkg
 description: Install a full vcpkg environment
 inputs:
-
-  vcpkgVersion:
-    description: Enter vcpkg version tag or stable or latest
+  vcpkgCache:
+    description: Cache vcpkg installation
     required: false
-    default: latest
-    type: string
-
-  vcpkgRoot:
-    description: Enter VCPKGROOT as vcpkg root path
-    required: false
-    default: /usr/local/vcpkg
-    type: string
-
-  vcpkgDownload:
-    description: Enter VCPKGDOWNLOAD as vcpkg download path
-    required: false
-    default: /usr/local/vcpkg-downloads
-    type: string
+    default: |
+      ~/.cache/vcpkg
+      ~/vcpkg
+      ~/AppData/Local/vcpkg
 
 runs:
   using: composite
   steps:
-    - name: Setup vcpkg
-      run: |
-        git clone --depth 1 https://github.com/msclock/features.git /tmp/vcpkg
+    - uses: actions/cache@v4
+      with:
+        path: ${{ inputs.vcpkgCache }}
+        key: ${{ runner.os }}
+        restore-keys: ${{ runner.os }}
 
-        sudo USERNAME="$USER" VCPKGVERSION="${{ inputs.vcpkgVersion }}" VCPKGROOT="${{ inputs.vcpkgRoot }}" \
-          VCPKGDOWNLOAD="${{ inputs.vcpkgDownload }}" /tmp/vcpkg/src/vcpkg/install.sh
-        vcpkg --version
+    - uses: aminya/setup-cpp@v1
+      with:
+        vcpkg: true
+
+    - name: Export Vcpkg Path for Windows
+      if: ${{ runner.os == 'Windows' }}
+      shell: powershell
+      run: |
+        echo "VCPKG_ROOT=$env:VCPKG_INSTALLATION_ROOT"
+        setx VCPKG_ROOT "%VCPKG_INSTALLATION_ROOT%"
+        setx PATH "%VCPKG_INSTALLATION_ROOT%;%PATH%"
+        echo "PATH=$env:PATH"
+
+    - name: Export Vcpkg Path for Linux
+      if: ${{ runner.os != 'Windows' }}
       shell: bash
+      run: |
+        echo "VCPKG_ROOT=$VCPKG_INSTALLATION_ROOT"
+        echo "VCPKG_ROOT=$VCPKG_INSTALLATION_ROOT" >> $GITHUB_ENV
+        echo "PATH=$VCPKG_INSTALLATION_ROOT:$PATH" >> $GITHUB_ENV
+        echo "PATH=$PATH"
