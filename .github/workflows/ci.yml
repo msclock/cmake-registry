@@ -162,6 +162,7 @@ jobs:
 
   verify_os:
     runs-on: ${{ matrix.os }}
+    needs: [pre-commit, format_and_update_ports]
     permissions:
       contents: read
     strategy:
