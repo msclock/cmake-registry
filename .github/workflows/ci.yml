@@ -43,6 +43,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      id-token: write
+      pull-requests: write
 
     steps:
       - name: Checkout repository
@@ -54,10 +56,6 @@ jobs:
 
       - name: Setup vcpkg
         uses: ./.github/actions/setup-vcpkg
-        with:
-          vcpkgVersion: latest
-          vcpkgRoot: /usr/local/vcpkg
-          vcpkgDownload: /usr/local/vcpkg-downloads
 
       - name: Format vcpkg.json
         run: |
@@ -162,12 +160,52 @@ jobs:
           commit_options: --amend --no-edit
           skip_fetch: true
 
+  verify_os:
+    runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-latest]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: ${{ github.head_ref }}
+
+      - name: Install vcpkg
+        uses: ./.github/actions/setup-vcpkg
+
+      - name: Set up python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        uses: jannekem/run-python-script-action@v1
+        with:
+          script: |
+            import os
+            import subprocess
+            for port in os.listdir("ports"):
+                subprocess.check_call(
+                    [
+                        "vcpkg",
+                        "install",
+                        port,
+                        "--overlay-ports=ports",
+                    ]
+                )
+
   release:
     name: release
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    needs: [pre-commit, format_and_update_ports]
+    needs: [pre-commit, format_and_update_ports, verify_os]
 
     steps:
       - name: Checkout
