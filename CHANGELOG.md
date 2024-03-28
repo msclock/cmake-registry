@@ -1,3 +1,18 @@
+## [1.0.42](https://github.com/msclock/cmake-registry/compare/v1.0.41...v1.0.42) (2024-03-28)
+
+
+### Chores
+
+* **port:** update msclock/cmake-modules to v1.3.19 ([#75](https://github.com/msclock/cmake-registry/issues/75)) ([1bb629b](https://github.com/msclock/cmake-registry/commit/1bb629b0677ecacd9bdea464e79c38e0ebafd733))
+* remove annotated tag recreation ([#73](https://github.com/msclock/cmake-registry/issues/73)) ([01cc1ac](https://github.com/msclock/cmake-registry/commit/01cc1aceb7e68ae2842f4749645262e3da96d3ae))
+
+
+### CI
+
+* optimize setup-vcpkg ([#71](https://github.com/msclock/cmake-registry/issues/71)) ([3e56e6e](https://github.com/msclock/cmake-registry/commit/3e56e6e004045f306ad7ff1699c0b871b8c23e1c))
+* set needs for verify_os ([#72](https://github.com/msclock/cmake-registry/issues/72)) ([ea4b2c6](https://github.com/msclock/cmake-registry/commit/ea4b2c6f46b910d9c706a422d629c1778e62c85c))
+* skip release in pr ([#74](https://github.com/msclock/cmake-registry/issues/74)) ([bddf696](https://github.com/msclock/cmake-registry/commit/bddf6963c98290fe33dd5c912c2a61a1525cc300))
+
 ## [1.0.41](https://github.com/msclock/cmake-registry/compare/v1.0.40...v1.0.41) (2024-03-16)
 
 
