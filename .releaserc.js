@@ -49,15 +49,6 @@ module.exports = {
         },
       },
     ],
-    [
-      "@semantic-release/exec",
-      {
-        publishCmd: [
-          "git tag -a -f v${nextRelease.version} --cleanup=whitespace -m '${nextRelease.notes}'",
-          "git push --force origin v${nextRelease.version}"
-        ].join(" && "),
-      }
-    ],
     ["@semantic-release/changelog", { changelogFile: "CHANGELOG.md" }],
     [
       "@semantic-release/git",
