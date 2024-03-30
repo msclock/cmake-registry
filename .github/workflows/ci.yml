@@ -76,17 +76,18 @@ jobs:
       - name: Verify all modules and update hash
         run: |
           for dir in ports/* ; do
-              echo "Test to install $dir"
-              status=0
-              install_output=$(vcpkg install ${dir##ports/} --overlay-ports=ports) || status=$?
-              if [[ ! $status -eq 0 ]]; then
-                echo "  Update hash on $dir/portfile.cmake"
-                expected=$(echo "$install_output" | grep -oP "(?<=Expected hash: ).{128}")
-                actual=$(echo "$install_output" | grep -oP "(?<=Actual hash: ).{128}")
-                sed -i "s@${expected}@${actual}@g" "$dir/portfile.cmake"
-                echo "  Expected hash: ${expected}"
-                echo "  Actual hash: ${actual}"
-              fi
+            echo "Test to install $dir"
+            vcpkg remove ${dir##ports/} --recurse || true
+            status=0
+            install_output=$(vcpkg install ${dir##ports/} --overlay-ports=ports) || status=$?
+            if [[ ! $status -eq 0 ]]; then
+              echo "  Update hash on $dir/portfile.cmake"
+              expected=$(echo "$install_output" | grep -oP "(?<=Expected hash: ).{128}")
+              actual=$(echo "$install_output" | grep -oP "(?<=Actual hash: ).{128}")
+              sed -i "s@${expected}@${actual}@g" "$dir/portfile.cmake"
+              echo "  Expected hash: ${expected}"
+              echo "  Actual hash: ${actual}"
+            fi
           done
 
       - name: Detect hash changes against local
@@ -192,6 +193,14 @@ jobs:
             import os
             import subprocess
             for port in os.listdir("ports"):
+                subprocess.check_call(
+                    [
+                        "vcpkg",
+                        "remove",
+                        port,
+                        "--recurse",
+                    ]
+                )
                 subprocess.check_call(
                     [
                         "vcpkg",
