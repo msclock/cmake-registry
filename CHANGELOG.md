@@ -1,3 +1,17 @@
+## [1.0.44](https://github.com/msclock/cmake-registry/compare/v1.0.43...v1.0.44) (2024-03-30)
+
+
+### Chores
+
+* **port:** update msclock/cmake-modules to v1.3.22 ([#77](https://github.com/msclock/cmake-registry/issues/77)) ([c2c41b8](https://github.com/msclock/cmake-registry/commit/c2c41b85bdc381687a434a14bf03573a419e9aeb))
+
+
+### CI
+
+* update versions with --overwrite-version ([#80](https://github.com/msclock/cmake-registry/issues/80)) ([f8b1b22](https://github.com/msclock/cmake-registry/commit/f8b1b225781b941d02d4b41896e2e19aa687314b))
+* vcpkg root fix ([#78](https://github.com/msclock/cmake-registry/issues/78)) ([0a1aef2](https://github.com/msclock/cmake-registry/commit/0a1aef26110ff31c9ef250f2588def366ec1815f))
+* verify hash and update ([#79](https://github.com/msclock/cmake-registry/issues/79)) ([dd22b8f](https://github.com/msclock/cmake-registry/commit/dd22b8fcfe42c0a0226ddf527ec70971c95db862))
+
 ## [1.0.43](https://github.com/msclock/cmake-registry/compare/v1.0.42...v1.0.43) (2024-03-29)
 
 
