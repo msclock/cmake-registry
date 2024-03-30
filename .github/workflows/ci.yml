@@ -131,7 +131,8 @@ jobs:
           for dir in ports/* ; do
             vcpkg x-add-version ${dir##ports/} --overlay-ports=./ports \
               --x-builtin-registry-versions-dir=./versions/ \
-              --x-builtin-ports-root=./ports
+              --x-builtin-ports-root=./ports \
+              --overwrite-version
           done
 
       - name: Detect versions changes against local
