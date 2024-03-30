@@ -26,16 +26,18 @@ runs:
       if: ${{ runner.os == 'Windows' }}
       shell: powershell
       run: |
-        echo "VCPKG_ROOT=$env:VCPKG_INSTALLATION_ROOT"
-        setx VCPKG_ROOT "%VCPKG_INSTALLATION_ROOT%"
-        setx PATH "%VCPKG_INSTALLATION_ROOT%;%PATH%"
+        $vcpkgCommand = Get-Command vcpkg
+        echo "VCPKG_ROOT=$(Split-Path $vcpkgCommand.Source)"
+        setx VCPKG_ROOT "$(Split-Path $vcpkgCommand.Source)"
+        setx PATH "$(Split-Path $vcpkgCommand.Source);%PATH%"
         echo "PATH=$env:PATH"
 
     - name: Export Vcpkg Path for Linux
       if: ${{ runner.os != 'Windows' }}
       shell: bash
       run: |
-        echo "VCPKG_ROOT=$VCPKG_INSTALLATION_ROOT"
-        echo "VCPKG_ROOT=$VCPKG_INSTALLATION_ROOT" >> $GITHUB_ENV
-        echo "PATH=$VCPKG_INSTALLATION_ROOT:$PATH" >> $GITHUB_ENV
+        vcpkgPath=$(which vcpkg)
+        echo "VCPKG_ROOT=$(dirname $vcpkgPath)"
+        echo "VCPKG_ROOT=$(dirname $vcpkgPath)" >> $GITHUB_ENV
+        echo "PATH=$(dirname $vcpkgPath):$PATH" >> $GITHUB_ENV
         echo "PATH=$PATH"
