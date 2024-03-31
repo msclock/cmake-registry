@@ -1,3 +1,10 @@
+## [1.0.49](https://github.com/msclock/cmake-registry/compare/v1.0.48...v1.0.49) (2024-03-31)
+
+
+### Chores
+
+* **port:** update msclock/cmake-modules to v1.4.5 ([#85](https://github.com/msclock/cmake-registry/issues/85)) ([22770c9](https://github.com/msclock/cmake-registry/commit/22770c9e2633cf3e253df68aa64f64c4597b4618))
+
 ## [1.0.48](https://github.com/msclock/cmake-registry/compare/v1.0.47...v1.0.48) (2024-03-31)
 
 
