@@ -21,7 +21,7 @@
       "port-version": 0
     },
     "cmake-modules": {
-      "baseline": "1.4.12",
+      "baseline": "1.4.13",
       "port-version": 0
     },
     "cmake-stm32": {
