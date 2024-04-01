@@ -1,3 +1,11 @@
+## [1.0.52](https://github.com/msclock/cmake-registry/compare/v1.0.51...v1.0.52) (2024-04-01)
+
+
+### Chores
+
+* **deps:** update pre-commit hook macisamuele/language-formatters-pre-commit-hooks to v2.13.0 ([#89](https://github.com/msclock/cmake-registry/issues/89)) ([ad52600](https://github.com/msclock/cmake-registry/commit/ad52600018983a87510ab73412e2a45f1f101689))
+* **port:** update msclock/cmake-modules to v1.4.9 ([#88](https://github.com/msclock/cmake-registry/issues/88)) ([c8cb138](https://github.com/msclock/cmake-registry/commit/c8cb13892fd5d3d421d5ff1afd20df6f5fcad1fb))
+
 ## [1.0.51](https://github.com/msclock/cmake-registry/compare/v1.0.50...v1.0.51) (2024-03-31)
 
 
