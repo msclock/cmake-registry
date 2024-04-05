@@ -1,3 +1,10 @@
+## [1.0.69](https://github.com/msclock/cmake-registry/compare/v1.0.68...v1.0.69) (2024-04-05)
+
+
+### Performance
+
+* exclude chores ([#107](https://github.com/msclock/cmake-registry/issues/107)) ([994c116](https://github.com/msclock/cmake-registry/commit/994c1169037588bffcb913f86261fec2e620b7c9))
+
 ## [1.0.68](https://github.com/msclock/cmake-registry/compare/v1.0.67...v1.0.68) (2024-04-05)
 
 
