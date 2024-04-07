@@ -1,3 +1,11 @@
+## [1.0.70](https://github.com/msclock/cmake-registry/compare/v1.0.69...v1.0.70) (2024-04-07)
+
+
+### Chores
+
+* **deps:** update pre-commit hook pre-commit/pre-commit-hooks to v4.6.0 ([#108](https://github.com/msclock/cmake-registry/issues/108)) ([d9242d6](https://github.com/msclock/cmake-registry/commit/d9242d62edd2e880b1c953d56b73a132b56f89e4))
+* **port:** update msclock/cmake-modules to v1.4.27 ([#109](https://github.com/msclock/cmake-registry/issues/109)) ([631189f](https://github.com/msclock/cmake-registry/commit/631189f25a4384e4c66423ea011a9850b8c84756))
+
 ## [1.0.69](https://github.com/msclock/cmake-registry/compare/v1.0.68...v1.0.69) (2024-04-05)
 
 
