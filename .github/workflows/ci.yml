@@ -252,9 +252,6 @@ jobs:
               }
             ]
           extra_plugins: |
-            @semantic-release/changelog
-            @semantic-release/git
-            @semantic-release/exec
             @semantic-release/github
             conventional-changelog-conventionalcommits
         env:
