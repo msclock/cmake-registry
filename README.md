@@ -31,10 +31,10 @@ Add the modules to vcpkg configuration dependencies.
   "overrides": [
     {
       "name": "cmake-modules",
-      "version": "1.3.0"
+      "version": "x.x.x"  <---------- lock the cmake module version.
     }
   ]
 }
 ```
 
-There is a real [example](https://github.com/msclock/cpp-scaffold) can refer.
+There is an [example](https://github.com/msclock/cpp-scaffold) can refer.
