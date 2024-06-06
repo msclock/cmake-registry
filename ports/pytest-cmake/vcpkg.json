@@ -1,0 +1,13 @@
+{
+  "name": "pytest-cmake",
+  "version": "0.7.0",
+  "description": "Pytest module for CMake.",
+  "homepage": "https://github.com/python-cmake/pytest-cmake",
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake-module",
+      "host": true
+    }
+  ]
+}

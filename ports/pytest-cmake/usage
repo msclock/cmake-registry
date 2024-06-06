@@ -1,0 +1,6 @@
+The package pytest-cmake provides modules:
+
+    find_package(pytest-cmake REQUIRED)
+    # More details can refer to <https://github.com/python-cmake/pytest-cmake>.
+    include(pytest-cmake/FindPytest)
+    include(pytest-cmake/PytestAndTests)
