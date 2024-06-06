@@ -5,16 +5,15 @@
     ":enablePreCommit"
   ],
   "prHourlyLimit": 0,
-  "labels": [
-    "dependencies"
-  ],
   "packageRules": [
     {
+      "description": "Update port with label update-port and depName commit message topic",
       "addLabels": [
         "update-port"
       ],
-      "matchFileNames": [
-        "**/vcpkg.json"
+      "matchDepTypes": [
+        "git-hash-port",
+        "semver-port"
       ],
       "semanticCommitScope": "port",
       "commitMessageTopic": "{{depName}}"
@@ -23,6 +22,7 @@
   "customManagers": [
     {
       "description": "Update vcpkg.json registration port with git hash",
+      "depTypeTemplate": "git-hash-port",
       "fileMatch": [
         "vcpkg\\.json$"
       ],
@@ -33,6 +33,7 @@
     },
     {
       "description": "Update vcpkg.json registration port with semver",
+      "depTypeTemplate": "semver-port",
       "fileMatch": [
         "vcpkg\\.json$"
       ],
