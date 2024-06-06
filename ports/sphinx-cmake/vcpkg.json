@@ -1,0 +1,13 @@
+{
+  "name": "sphinx-cmake",
+  "version": "0.1.1",
+  "description": "Sphinx module for CMake.",
+  "homepage": "https://github.com/python-cmake/sphinx-cmake",
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake-module",
+      "host": true
+    }
+  ]
+}

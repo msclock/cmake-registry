@@ -40,6 +40,10 @@
       "baseline": "03239c6320a73345c96b831f2f7528a5494c7d0c",
       "port-version": 0
     },
+    "sphinx-cmake": {
+      "baseline": "0.1.1",
+      "port-version": 0
+    },
     "stablecoder-cmake-scripts": {
       "baseline": "45f72fdc2d715030c6cb61e3d5977811ea45abda",
       "port-version": 0

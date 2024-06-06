@@ -1,0 +1,5 @@
+The package sphinx-cmake provides modules:
+
+    find_package(sphinx-cmake REQUIRED)
+    # More details can refer to <https://github.com/python-cmake/sphinx-cmake>.
+    include(pytest-cmake/FindSphinx)
