@@ -1,0 +1,5 @@
+The package cmake-metalshadersupport provides modules:
+
+    find_package(cmake-metalshadersupport REQUIRED)
+    # More details can refer to <https://github.com/dpogue/CMake-MetalShaderSupport>.
+    include(cmake-metalshadersupport/MetalShaderSupport)
