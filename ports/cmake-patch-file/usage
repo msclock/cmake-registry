@@ -1,0 +1,5 @@
+The package cmake-patch-file provides CMake modules:
+
+    find_package(cmake-patch-file REQUIRED)
+    # More detail can refer to <https://github.com/scivision/cmake-patch-file>.
+    include(cmake-patch-file/PathFile)

@@ -28,6 +28,10 @@
       "baseline": "1.5.5",
       "port-version": 0
     },
+    "cmake-patch-file": {
+      "baseline": "2.0.0",
+      "port-version": 0
+    },
     "cmake-stm32": {
       "baseline": "369b66d72be045e2fed55c16d407a19a94e9081a",
       "port-version": 0
