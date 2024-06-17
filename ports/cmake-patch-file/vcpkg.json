@@ -1,0 +1,13 @@
+{
+  "name": "cmake-patch-file",
+  "version": "2.0.0",
+  "description": "Use \"git apply\" from CMake to patch source/headers/etc.",
+  "homepage": "https://github.com/scivision/cmake-patch-file",
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake-module",
+      "host": true
+    }
+  ]
+}
