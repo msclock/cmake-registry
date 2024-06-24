@@ -1,6 +1,6 @@
 {
   "name": "vcpkg-cmake-module",
-  "version-date": "2023-10-12",
-  "port-version": 1,
+  "version-date": "2024-06-24",
+  "description": "Install cmake module paths under the target path share/${PORT}/_modules/${PORT}",
   "license": "MIT"
 }

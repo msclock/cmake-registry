@@ -57,8 +57,8 @@
       "port-version": 0
     },
     "vcpkg-cmake-module": {
-      "baseline": "2023-10-12",
-      "port-version": 1
+      "baseline": "2024-06-24",
+      "port-version": 0
     },
     "vector-of-bool-cmrc": {
       "baseline": "952ffddba731fc110bd50409e8d2b8a06abbd237",
