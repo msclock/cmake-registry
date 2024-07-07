@@ -1,6 +1,6 @@
 {
   "name": "cmake-stm32",
-  "version-string": "369b66d72be045e2fed55c16d407a19a94e9081a",
+  "version-string": "d8f9e07c9fd333ef73d6f8dcd5c32ef4e80692f4",
   "description": "CMake for stm32 developing.",
   "homepage": "https://github.com/ObKo/stm32-cmake/tree/master",
   "license": "MIT",
