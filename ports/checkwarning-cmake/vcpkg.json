@@ -1,0 +1,13 @@
+{
+  "name": "checkwarning-cmake",
+  "version": "2.1.1",
+  "description": "CMake wrapper for conan C and C++ package manager",
+  "homepage": "https://github.com/threeal/CheckWarning.cmake",
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake-module",
+      "host": true
+    }
+  ]
+}
