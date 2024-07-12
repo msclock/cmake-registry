@@ -1,7 +1,7 @@
 {
   "name": "checkwarning-cmake",
   "version": "2.1.1",
-  "description": "CMake wrapper for conan C and C++ package manager",
+  "description": "Check for compiler warnings in your CMake project.",
   "homepage": "https://github.com/threeal/CheckWarning.cmake",
   "license": "MIT",
   "dependencies": [
