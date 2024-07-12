@@ -1,0 +1,7 @@
+The package assertion-cmake provides CMake modules:
+
+    find_package(assertion-cmake REQUIRED)
+    # More detail can refer to <https://github.com/threeal/assertion-cmake>.
+    include(assertion-cmake/Assertion)
+    assert(EXISTS "${CMAKE_BINARY_DIR}/CMakeCache.txt")
+    assert(DEFINED CMAKE_PROJECT_VERSION_TWEAK)
