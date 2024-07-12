@@ -1,0 +1,7 @@
+The package checkwarning-cmake provides CMake modules:
+
+    find_package(checkwarning-cmake REQUIRED)
+    # More detail can refer to <https://github.com/threeal/CheckWarning.cmake>.
+    include(checkwarning-cmake/CheckWarning)
+    target_check_warning(main)
+    target_compile_options(main PRIVATE -Wno-unused-variable)
