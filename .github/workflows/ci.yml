@@ -10,8 +10,8 @@ on:
   pull_request:
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
 
 jobs:
 
@@ -21,10 +21,20 @@ jobs:
       contents: write
 
     steps:
+      - name: Generate a bot token with BOT_APP_ID
+        id: bot_token
+        if: vars.BOT_APP_ID && env.BOT_PRIVATE_KEY != null
+        uses: actions/create-github-app-token@31c86eb3b33c9b601a1f60f98dcbfd1d70f379b4 # v1
+        env:
+          BOT_PRIVATE_KEY: ${{ secrets.BOT_PRIVATE_KEY }}
+        with:
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ steps.bot_token.outputs.token || secrets.PAT || secrets.GITHUB_TOKEN }}
           ref: ${{ github.head_ref }}
 
       - name: Set up python
@@ -47,10 +57,20 @@ jobs:
       pull-requests: write
 
     steps:
+      - name: Generate a bot token with BOT_APP_ID
+        id: bot_token
+        if: vars.BOT_APP_ID && env.BOT_PRIVATE_KEY != null
+        uses: actions/create-github-app-token@31c86eb3b33c9b601a1f60f98dcbfd1d70f379b4 # v1
+        env:
+          BOT_PRIVATE_KEY: ${{ secrets.BOT_PRIVATE_KEY }}
+        with:
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ steps.bot_token.outputs.token || secrets.PAT || secrets.GITHUB_TOKEN }}
           ref: ${{ github.head_ref }}
           fetch-depth: 2
 
@@ -211,30 +231,20 @@ jobs:
                     ]
                 )
 
-  release:
-    name: release
-    runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request'
+  pass:
+    if: always()
+    needs: [verify_os]
+    runs-on: ubuntu-22.04
+    timeout-minutes: 2
     permissions:
-      contents: write
-    needs: [pre-commit, format_and_update_ports, verify_os]
+      pull-requests: write
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Decide whether the needed jobs succeeded or failed
+        uses: re-actors/alls-green@release/v1
         with:
-          ref: ${{ github.head_ref }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          jobs: ${{ toJSON(needs) }}
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Semantic Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: >
-          npx
-          --package conventional-changelog-conventionalcommits@7
-          --package semantic-release@23
-          semantic-release
+      - name: Approve pr if all jobs succeeded
+        if: contains(github.event.pull_request.labels.*.name, 'auto-approval')
+        uses: hmarr/auto-approve-action@v4
