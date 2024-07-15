@@ -41,7 +41,7 @@
       "port-version": 0
     },
     "cmake-stm32": {
-      "baseline": "d8f9e07c9fd333ef73d6f8dcd5c32ef4e80692f4",
+      "baseline": "5f5c92c1a0a88dd5d214f60402d4244af4e3b795",
       "port-version": 0
     },
     "pytest-cmake": {
