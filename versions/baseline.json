@@ -45,7 +45,7 @@
       "port-version": 0
     },
     "pytest-cmake": {
-      "baseline": "0.7.0",
+      "baseline": "0.8.0",
       "port-version": 0
     },
     "robotology-cmake-ycm": {
