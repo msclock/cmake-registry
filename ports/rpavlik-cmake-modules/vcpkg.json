@@ -1,6 +1,6 @@
 {
   "name": "rpavlik-cmake-modules",
-  "version-string": "03239c6320a73345c96b831f2f7528a5494c7d0c",
+  "version-string": "1b450496c5d11fdcad8b000843d0c516e1eaa59f",
   "description": "Ryan's CMake Modules Collection.",
   "homepage": "https://github.com/rpavlik/cmake-modules/tree/main",
   "license": "BSL-1.0",

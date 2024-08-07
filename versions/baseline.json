@@ -53,7 +53,7 @@
       "port-version": 0
     },
     "rpavlik-cmake-modules": {
-      "baseline": "03239c6320a73345c96b831f2f7528a5494c7d0c",
+      "baseline": "1b450496c5d11fdcad8b000843d0c516e1eaa59f",
       "port-version": 0
     },
     "sphinx-cmake": {
