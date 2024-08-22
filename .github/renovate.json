@@ -5,11 +5,15 @@
     ":enablePreCommit"
   ],
   "prHourlyLimit": 0,
+  "automerge": true,
+  "automergeType": "pr",
+  "platformAutomerge": true,
   "packageRules": [
     {
       "description": "Update port with label update-port and depName commit message topic",
       "addLabels": [
-        "update-port"
+        "update-port",
+        "auto-approval"
       ],
       "matchDepTypes": [
         "git-hash-port",
