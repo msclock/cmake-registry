@@ -10,8 +10,8 @@ on:
   pull_request:
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
 
 jobs:
 
@@ -246,5 +246,4 @@ jobs:
           jobs: ${{ toJSON(needs) }}
 
       - name: Approve pr if all jobs succeeded
-        if: contains(github.event.pull_request.labels.*.name, 'auto-approval')
         uses: hmarr/auto-approve-action@v4
