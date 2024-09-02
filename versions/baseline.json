@@ -33,7 +33,7 @@
       "port-version": 0
     },
     "cmake-modules": {
-      "baseline": "1.5.10",
+      "baseline": "1.6.0",
       "port-version": 0
     },
     "cmake-patch-file": {
