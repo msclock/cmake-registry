@@ -1,6 +1,6 @@
 {
   "name": "stablecoder-cmake-scripts",
-  "version-string": "95f2126620678779f172ccda6135e2f1d51f2220",
+  "version-string": "ea9e8b7579687b4f305907f4e0df460e49c0f097",
   "description": "Easy-to-add enhancements for any C/C++ CMake project. Including AFL fuzzing, code-coverage, Thread/Address/Leak/Address/undefined sanitizer instrumentation, compilation of GLSL shaders and more.",
   "homepage": "https://github.com/StableCoder/cmake-scripts/tree/main",
   "license": "Apache-2.0",
