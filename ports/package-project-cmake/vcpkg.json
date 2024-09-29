@@ -1,0 +1,13 @@
+{
+  "name": "package-project-cmake",
+  "version": "1.12.0",
+  "description": "Help other developers use your project. A CMake script for packaging C/C++ projects for simple project installation while employing best-practices for maximum compatibility.",
+  "homepage": "https://github.com/TheLartians/PackageProject.cmake",
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake-module",
+      "host": true
+    }
+  ]
+}
