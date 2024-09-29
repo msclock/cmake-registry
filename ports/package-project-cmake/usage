@@ -1,0 +1,5 @@
+The package package-project-cmake provides CMake modules:
+
+    find_package(package-project-cmake REQUIRED)
+    # More detail can refer to <https://github.com/TheLartians/PackageProject.cmake>.
+    include(package-project-cmake/PackageProject.cmake)
