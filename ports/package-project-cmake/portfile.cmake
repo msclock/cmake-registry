@@ -11,7 +11,8 @@ vcpkg_from_github(
 
 file(RENAME ${SOURCE_PATH}/CMakeLists.txt ${SOURCE_PATH}/PackageProject.cmake)
 
-set(items ${SOURCE_PATH}/PackageProject.cmake ${SOURCE_PATH}/version.h.in ${SOURCE_PATH}/Config.cmake.in)
+set(items ${SOURCE_PATH}/PackageProject.cmake ${SOURCE_PATH}/version.h.in
+          ${SOURCE_PATH}/Config.cmake.in)
 vcpkg_cmake_module(PATH_LIST ${items})
 
 file(INSTALL ${CMAKE_CURRENT_LIST_DIR}/usage
