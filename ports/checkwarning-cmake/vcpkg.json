@@ -1,6 +1,6 @@
 {
   "name": "checkwarning-cmake",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "Check for compiler warnings in your CMake project.",
   "homepage": "https://github.com/threeal/CheckWarning.cmake",
   "license": "MIT",

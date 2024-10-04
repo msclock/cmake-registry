@@ -13,7 +13,7 @@
       "port-version": 0
     },
     "checkwarning-cmake": {
-      "baseline": "2.1.1",
+      "baseline": "3.0.0",
       "port-version": 0
     },
     "cmake-conan": {
