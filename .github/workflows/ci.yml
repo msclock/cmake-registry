@@ -16,7 +16,7 @@ concurrency:
 jobs:
 
   pre-commit:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     permissions:
       contents: write
 
@@ -50,7 +50,7 @@ jobs:
           commit_message: 'ci: auto fixes from pre-commit'
 
   format_and_update_ports:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     permissions:
       contents: write
       id-token: write
