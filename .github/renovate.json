@@ -5,11 +5,19 @@
     ":enablePreCommit"
   ],
   "prHourlyLimit": 0,
-  "automerge": true,
   "automergeType": "pr",
   "automergeStrategy": "merge-commit",
   "platformAutomerge": true,
   "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": true
+    },
     {
       "description": "Update port with label update-port and depName commit message topic",
       "addLabels": [
@@ -18,6 +26,13 @@
       "matchDepTypes": [
         "git-hash-port",
         "semver-port"
+      ],
+      "automerge": true,
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch",
+        "digest"
       ],
       "semanticCommitScope": "port",
       "commitMessageTopic": "{{depName}}"
