@@ -1,6 +1,6 @@
 {
   "name": "assertion-cmake",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A CMake module containing a collection of assertion functions and other utilities for testing CMake code.",
   "homepage": "https://github.com/threeal/assertion-cmake",
   "license": "MIT",
