@@ -1,6 +1,6 @@
 {
   "name": "robotology-cmake-ycm",
-  "version": "0.16.9",
+  "version": "0.17.0",
   "description": "Extra CMake Modules for YARP and friends.",
   "homepage": "https://github.com/robotology/ycm",
   "license": "BSD-1-Clause",
