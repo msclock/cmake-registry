@@ -40,6 +40,7 @@
   ],
   "customManagers": [
     {
+      "customType": "regex",
       "description": "Update vcpkg.json registration port with git hash",
       "depTypeTemplate": "git-hash-port",
       "fileMatch": [
@@ -51,6 +52,7 @@
       "datasourceTemplate": "git-refs"
     },
     {
+      "customType": "regex",
       "description": "Update vcpkg.json registration port with semver",
       "depTypeTemplate": "semver-port",
       "fileMatch": [
