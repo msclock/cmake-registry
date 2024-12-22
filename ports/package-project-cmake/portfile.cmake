@@ -6,7 +6,7 @@ vcpkg_from_github(
   REF
   v${VERSION}
   SHA512
-  d13cc286f06af7231da28283fa4b0cb3ad42c033c37d32ed571dcc7f150b03a3b2fd2b2912bda031fe1a6d73ca846578f3d7c4af4d4b0e540cb9a798bd51ceac
+  3cf0523bddc213f206ed0ca57803550cb7db9e293392d3741138be47f49d9027ef517e1656235a349a62b492d35c3fc677714dc00afe59e2d36144a9689cfa8f
 )
 
 file(RENAME ${SOURCE_PATH}/CMakeLists.txt ${SOURCE_PATH}/PackageProject.cmake)
