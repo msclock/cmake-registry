@@ -1,7 +1,6 @@
 {
   "name": "cmake-cpm",
-  "version": "0.40.2",
-  "port-version": 2,
+  "version": "0.40.3",
   "description": "CMake's missing package manager. A small CMake script for setup-free, cross-platform, reproducible dependency management.",
   "homepage": "https://github.com/cpm-cmake/CPM.cmake",
   "license": "MIT",
