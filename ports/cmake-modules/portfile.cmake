@@ -6,7 +6,7 @@ vcpkg_from_github(
   REF
   v${VERSION}
   SHA512
-  74f2ac86f6cca4adaf9c2fbeadfa3f164fb87ab4e00a391f47469f92a48f25cda579d74de818b65f38f3ab5b114a5778e27c393ccb02c60a9ee08c97cdb3802e
+  40f112fea3f5ed1d1c6e0c3120d82179cd7f9c93d56fd0b907d104e3790ef64083fdbf51fd079940233c62f8ad8c935a708c72541853d577fbbd2ef835528bab
 )
 
 file(GLOB items ${SOURCE_PATH}/cmake/*)
