@@ -37,4 +37,4 @@ Add the modules to vcpkg configuration dependencies.
 }
 ```
 
-There is an [example](https://github.com/msclock/cpp-scaffold) can refer.
+There is a real [example](https://github.com/msclock/cpp-scaffold).
