@@ -102,8 +102,9 @@ jobs:
             install_output=$(vcpkg install ${dir##ports/} --overlay-ports=ports) || status=$?
             if [[ ! $status -eq 0 ]]; then
               echo "  Update hash on $dir/portfile.cmake"
-              expected=$(echo "$install_output" | grep -oP "(?<=Expected hash: ).{128}")
-              actual=$(echo "$install_output" | grep -oP "(?<=Actual hash: ).{128}")
+              hashes=$(echo "$install_output" | grep -oP "(?<=: )[\d\w]{128}")
+              expected=$(echo $hashes | cut -d' ' -f1)
+              actual=$(echo $hashes | cut -d' ' -f2)
               sed -i "s@${expected}@${actual}@g" "$dir/portfile.cmake"
               echo "  Expected hash: ${expected}"
               echo "  Actual hash: ${actual}"
