@@ -53,7 +53,7 @@
       "port-version": 0
     },
     "robotology-cmake-ycm": {
-      "baseline": "0.18.1",
+      "baseline": "0.18.2",
       "port-version": 0
     },
     "rpavlik-cmake-modules": {
