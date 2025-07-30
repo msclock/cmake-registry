@@ -65,7 +65,7 @@
       "port-version": 0
     },
     "stablecoder-cmake-scripts": {
-      "baseline": "21af2126b195dbada32c92cd6321f87de9477c91",
+      "baseline": "d714fbd52b616a2e8aad87474e6550bd23876efe",
       "port-version": 0
     },
     "vcpkg-cmake-module": {
