@@ -41,7 +41,7 @@
       "port-version": 0
     },
     "cmake-stm32": {
-      "baseline": "5f5c92c1a0a88dd5d214f60402d4244af4e3b795",
+      "baseline": "ecc5acc082effc4793eb7cbed8d8b7bd4896ca6e",
       "port-version": 0
     },
     "package-project-cmake": {
