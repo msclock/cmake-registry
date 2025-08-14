@@ -1,6 +1,6 @@
 {
   "name": "sphinx-cmake",
-  "version": "0.2.2",
+  "version": "1.0.1",
   "description": "Sphinx module for CMake.",
   "homepage": "https://github.com/python-cmake/sphinx-cmake",
   "license": "MIT",
