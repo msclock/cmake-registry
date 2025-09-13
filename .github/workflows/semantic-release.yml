@@ -21,7 +21,7 @@ jobs:
       - name: Generate a bot token with BOT_APP_ID
         id: bot_token
         if: vars.BOT_APP_ID && env.BOT_PRIVATE_KEY != null
-        uses: actions/create-github-app-token@a8d616148505b5069dccd32f177bb87d7f39123b # v2
+        uses: actions/create-github-app-token@67018539274d69449ef7c02e8e71183d1719ab42 # v2
         env:
           BOT_PRIVATE_KEY: ${{ secrets.BOT_PRIVATE_KEY }}
         with:
