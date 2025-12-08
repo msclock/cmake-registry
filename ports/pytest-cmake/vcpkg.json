@@ -1,6 +1,6 @@
 {
   "name": "pytest-cmake",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Pytest module for CMake.",
   "homepage": "https://github.com/python-cmake/pytest-cmake",
   "license": "MIT",
