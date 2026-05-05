@@ -6,7 +6,7 @@ vcpkg_from_github(
   REF
   v${VERSION}
   SHA512
-  6d5f4c4dc05ae0a39f789a70363ea4f624431328cf48b79420c2193d279c1044818bbbbd5c94a802b7c29fe165c91f6a31eb3a1369e2a03f93a8f66de47188ba
+  865ac85a23847df73ae84c75788ccd063d4a0a84a1c3facb078e8d98648439ab10fe51d21bf9cc38f5a717a4edef19ea40db883b12b1ceb7068ba1e148378dc0
 )
 
 vcpkg_replace_string(${SOURCE_PATH}/cmake/CPM.cmake
