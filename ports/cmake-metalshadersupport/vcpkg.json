@@ -1,6 +1,6 @@
 {
   "name": "cmake-metalshadersupport",
-  "version-string": "84209c32e50966ee4dca66f7b7eebacd934c87fb",
+  "version-string": "459f52c7aa865b8c1a9ce5aad082f935e74458b4",
   "description": "CMake modules to support compiling Apple Metal shaders as part of a CMake build system.",
   "homepage": "https://github.com/dpogue/CMake-MetalShaderSupport/tree/main",
   "license": "BSD-3-Clause",
