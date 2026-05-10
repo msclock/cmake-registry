@@ -29,7 +29,7 @@
       "port-version": 0
     },
     "cmake-metalshadersupport": {
-      "baseline": "84209c32e50966ee4dca66f7b7eebacd934c87fb",
+      "baseline": "459f52c7aa865b8c1a9ce5aad082f935e74458b4",
       "port-version": 0
     },
     "cmake-modules": {
