@@ -21,7 +21,7 @@
       "port-version": 0
     },
     "cmake-cpm": {
-      "baseline": "0.42.3",
+      "baseline": "0.43.1",
       "port-version": 0
     },
     "cmake-forward-arguments": {
