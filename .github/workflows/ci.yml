@@ -38,7 +38,7 @@ jobs:
           ref: ${{ github.head_ref }}
 
       - name: Set up python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
 
       - name: Run pre-commit on codebase
         uses: pre-commit/action@v3.0.1
@@ -204,7 +204,7 @@ jobs:
         uses: ./.github/actions/setup-vcpkg
 
       - name: Set up python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: 3.x
 
