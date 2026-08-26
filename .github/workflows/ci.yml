@@ -44,7 +44,7 @@ jobs:
         uses: pre-commit/action@v3.0.1
 
       - name: Auto commit action
-        uses: stefanzweifel/git-auto-commit-action@v6
+        uses: stefanzweifel/git-auto-commit-action@v7
         if: failure()
         with:
           commit_message: 'ci: auto fixes from pre-commit'
@@ -82,7 +82,7 @@ jobs:
           vcpkg format-manifest --all $(find . -name "vcpkg.json")
 
       - name: Commit format vcpkg.json
-        uses: stefanzweifel/git-auto-commit-action@v6
+        uses: stefanzweifel/git-auto-commit-action@v7
         if: success()
         with:
           commit_message: 'ci: format vcpkg configuration'
@@ -129,7 +129,7 @@ jobs:
 
       - name: Commit port hash
         if: steps.filter-hash.outputs.ports == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v6
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           file_pattern: ports/*
           commit_message: ${{ steps.ports-last-commit-message.outputs.msg }}
@@ -175,7 +175,7 @@ jobs:
 
       - name: Commit versions
         if: steps.filter-versions.outputs.versions == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v6
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           file_pattern: versions/*
           commit_message: ${{ steps.last-commit-message.outputs.msg }}
