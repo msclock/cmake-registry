@@ -9,7 +9,7 @@ vcpkg_from_github(
   027e1dfcba719b938d0d91db5b6561be44f507d1c1e8bca95aa7e2cae87630c2c6494607515e166b65889f80da33e714f0437a33f102b60af0430b2f38b86e98
 )
 
-vcpkg_cmake_module(PATH_LIST ${SOURCE_PATH}/conan.cmake)
+vcpkg_cmake_module(PATH_LIST ${SOURCE_PATH}/conan_provider.cmake)
 
 file(INSTALL ${CMAKE_CURRENT_LIST_DIR}/usage
      DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT})
